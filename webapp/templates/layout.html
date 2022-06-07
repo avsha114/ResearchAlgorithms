@@ -120,15 +120,7 @@
   </head>
   <body>
     <div class="main-block">
-      {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+
       <div class="intro">
         {% block header %}
         {% endblock %}
@@ -136,6 +128,10 @@
       <div class="content-block">
         {% block content %}
         {% endblock %}
+      </div>
+      <form>
+          <p>Created by Avshalom Avraham and Tehila Ben-Kalifa © 2022</p>
+      </form>
       </div>
 
     </div>
