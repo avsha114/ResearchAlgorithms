@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block header %}
+    <i class="fas fa-graduation-cap"></i>
+        <h1>Bin Completion Algorithm</h1>
+
+{% endblock header %}
+{% block content %}
+<div class="content-section">
+
+
+    <form method="POST" action="/">  <!-- action "" means to return to the same page at submit.-->
+        <h2>Bin Completion Algorithm Completed On Input:</h2>
+    <h3>{{ alg_input }}<br><br></h3>
+
+    <h2>Result:</h2>
+    {% for i in range(0, len) %}
+        <h3>Bin {{ i }} : {{ result[i] }}</h3>
+    {% endfor %}
+        {{ form.hidden_tag() }}
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock content %}

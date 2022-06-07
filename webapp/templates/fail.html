@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block header %}
+    <i class="fas fa-graduation-cap"></i>
+        <h1>Bin Completion Algorithm</h1>
+
+{% endblock header %}
+{% block content %}
+<div class="content-section">
+
+
+    <form method="POST" action="/">  <!-- action "" means to return to the same page at submit.-->
+        <h2>Wrong Input! <br> Please Supply only numbers that are smaller than the binsize.<br></h2>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock content %}

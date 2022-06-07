@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block header %}
+    <i class="fas fa-graduation-cap"></i>
+        <h1>Bin Completion Algorithm</h1>
+        <p>
+          Upload a CSV file with the input.<br>
+          The first number in each line should be the bin size, then the other elements.<br><br>
+        </p>
+{% endblock header %}
+{% block content %}
+    <div class="content-section">
+    <form method="POST" action="">  <!-- action "" means to return to the same page at submit.-->
+        {{ form.hidden_tag() }}
+        <p>{{ form.binsize.label }} <br> {{ form.binsize }}</p>
+        <p>{{ form.items.label }} <br><br> {{ form.items }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    </div>
+{% endblock content %}
