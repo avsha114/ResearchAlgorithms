@@ -14,7 +14,8 @@ from prtpy.bins import BinsKeepingContents
 from prtpy.packing.bin_completion import bin_completion
 
 app = Flask(__name__)
-
+SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = SECRET_KEY
 
 # This form is used for the algorithms input
 class DataForm(FlaskForm):
@@ -62,8 +63,6 @@ def apply():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    SECRET_KEY = os.urandom(32)
-    app.config['SECRET_KEY'] = SECRET_KEY
     app.run()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
